@@ -1,0 +1,246 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>小遊戲劇場</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <script>
+        function content1(){
+    	document.getElementById("content").innerHTML="<u>"+"歡迎，"+ document.getElementById("name").value+"踏入劇場。"+"<br>"+"在小遊戲劇場中，"+"<br>"+"只有找出我內心的真實數字才能離開。"+"<br>"+"你......"+"<br>"+"<b>"+"也可以留下來陪我。"+"</b>"+"</u>";
+        }
+        var target=Math.floor((Math.random() * 100) + 1);
+        console.log(target);
+        function eval(){
+            if(document.getElementById("number").value > 100)
+             {document.getElementById("large").innerHTML="100";}
+            else if(document.getElementById("number").value > target)
+             {document.getElementById("large").innerHTML=document.getElementById("number").value;}
+            else if (document.getElementById("number").value < 1)
+             {document.getElementById("little").innerHTML="1";}
+            else if (document.getElementById("number").value < target)
+             	{document.getElementById("little").innerHTML=document.getElementById("number").value;}
+            else{document.getElementById("Bingo").innerHTML="<u>"+"答對了，"+"<b>"+document.getElementById("number").value+"</b>"+"是我的幸運數字。"+"<br>"+"沒想到你這麼快就看出來了，"+"<br>"+"真是有天賦啊！"+"<br>"+"......"+"<br>"+"<b>"+"這樣我更不想讓你走了。"+"</b>"+"</u>";}
+        }
+        var target1=Math.floor((Math.random() * 10)  );console.log(target1);
+        var target2=Math.floor((Math.random() * 10)  );console.log(target2);
+         while(target2==target1)
+             {var target2=Math.floor((Math.random() * 10)  );console.log(target2);}
+        var target3=Math.floor((Math.random() * 10)  );console.log(target3);
+         while(target3==target2 || target3==target1)
+             {var target3=Math.floor((Math.random() * 10)  );console.log(target3);}
+        function eval1(){
+            if(document.getElementById("number1").value == target1 && document.getElementById("number2").value == target2 && document.getElementById("number3").value == target3)
+                {document.getElementById("n1").innerHTML="3A0B";document.getElementById("n2").innerHTML="<u>"+"看來我留不下你，"+"<br>"+"......"+"<br>"+"你走吧！"+"<br>"+"<b>"+"別再回來了......"+"</b>"+"</u>";document.getElementById("leave").innerHTML="<a href='玩讀小區.html'><img src='images/f.JPG'></a>";        
+            }
+            else if (document.getElementById("number1").value == target1 && document.getElementById("number2").value == target2 && document.getElementById("number3").value != target3)
+                {document.getElementById("n1").innerHTML="2A0B";}
+            else if (document.getElementById("number1").value == target1 && document.getElementById("number2").value != target2 && document.getElementById("number3").value == target3)
+                {document.getElementById("n1").innerHTML="2A0B";}
+            else if (document.getElementById("number1").value != target1 && document.getElementById("number2").value == target2 && document.getElementById("number3").value == target3)
+                {document.getElementById("n1").innerHTML="2A0B";}
+            else if (document.getElementById("number1").value == target1 && document.getElementById("number2").value == target3 && document.getElementById("number3").value == target2)
+                {document.getElementById("n1").innerHTML="1A2B";}
+            else if (document.getElementById("number1").value == target2 && document.getElementById("number2").value == target1 && document.getElementById("number3").value == target3)
+                 {document.getElementById("n1").innerHTML="1A2B";}
+            else if (document.getElementById("number1").value == target3 && document.getElementById("number2").value == target2 && document.getElementById("number3").value == target1)
+                {document.getElementById("n1").innerHTML="1A2B";}
+            else if (document.getElementById("number1").value == target1 && document.getElementById("number2").value != target2 && document.getElementById("number3").value == target2)
+                {document.getElementById("n1").innerHTML="1A1B";}
+            else if (document.getElementById("number1").value == target1 && document.getElementById("number2").value == target3 && document.getElementById("number3").value != target3)
+                {document.getElementById("n1").innerHTML="1A1B";}
+            else if (document.getElementById("number1").value == target3 && document.getElementById("number2").value == target2 && document.getElementById("number3").value != target3)
+                {document.getElementById("n1").innerHTML="1A1B";}
+            else if (document.getElementById("number1").value != target1 && document.getElementById("number2").value == target2 && document.getElementById("number3").value == target1)
+                {document.getElementById("n1").innerHTML="1A1B";}
+            else if (document.getElementById("number1").value != target1 && document.getElementById("number2").value == target1 && document.getElementById("number3").value == target3)
+                {document.getElementById("n1").innerHTML="1A1B";}
+            else if (document.getElementById("number1").value == target2 && document.getElementById("number2").value != target2 && document.getElementById("number3").value == target3)
+                {document.getElementById("n1").innerHTML="1A1B";}
+            else if (document.getElementById("number1").value == target1 && document.getElementById("number2").value != target2 && document.getElementById("number3").value != target3)
+                {document.getElementById("n1").innerHTML="1A0B";}
+            else if (document.getElementById("number1").value != target1 && document.getElementById("number2").value != target2 && document.getElementById("number3").value == target3)
+                {document.getElementById("n1").innerHTML="1A0B";}
+            else if (document.getElementById("number1").value != target1 && document.getElementById("number2").value == target2 && document.getElementById("number3").value != target3)
+                {document.getElementById("n1").innerHTML="1A0B";}
+            else if (document.getElementById("number1").value == target2 && document.getElementById("number2").value == target3 && document.getElementById("number3").value == target1)
+                {document.getElementById("n1").innerHTML="0A3B";} 
+            else if (document.getElementById("number1").value == target3 && document.getElementById("number2").value == target1 && document.getElementById("number3").value == target2)
+                {document.getElementById("n1").innerHTML="0A3B";}
+            else if (document.getElementById("number1").value == target2 && document.getElementById("number2").value == target3 && document.getElementById("number3").value != target3)
+                {document.getElementById("n1").innerHTML="0A2B";} 
+            else if (document.getElementById("number1").value == target3 && document.getElementById("number2").value == target1 && document.getElementById("number3").value != target3)
+                {document.getElementById("n1").innerHTML="0A2B";}
+            else if (document.getElementById("number1").value == target2 && document.getElementById("number2").value == target1 && document.getElementById("number3").value != target3)
+                {document.getElementById("n1").innerHTML="0A2B";}
+            else if (document.getElementById("number1").value != target1 && document.getElementById("number2").value == target3 && document.getElementById("number3").value == target2)
+                {document.getElementById("n1").innerHTML="0A2B";} 
+            else if (document.getElementById("number1").value != target1 && document.getElementById("number2").value == target1 && document.getElementById("number3").value == target2)
+                {document.getElementById("n1").innerHTML="0A2B";}
+            else if (document.getElementById("number1").value != target1 && document.getElementById("number2").value == target3 && document.getElementById("number3").value == target1)
+                {document.getElementById("n1").innerHTML="0A2B";}
+            else if (document.getElementById("number1").value == target3 && document.getElementById("number2").value != target2 && document.getElementById("number3").value == target1)
+                {document.getElementById("n1").innerHTML="0A2B";} 
+            else if (document.getElementById("number1").value == target3 && document.getElementById("number2").value != target2 && document.getElementById("number3").value == target1)
+                {document.getElementById("n1").innerHTML="0A2B";}
+            else if (document.getElementById("number1").value == target3 && document.getElementById("number2").value != target2 && document.getElementById("number3").value == target2)
+                {document.getElementById("n1").innerHTML="0A2B";}
+            else if (document.getElementById("number1").value != target1 && document.getElementById("number2").value != target2 && document.getElementById("number3").value == target1)
+                {document.getElementById("n1").innerHTML="0A1B";}
+            else if (document.getElementById("number1").value != target1 && document.getElementById("number2").value != target2 && document.getElementById("number3").value == target2)
+                {document.getElementById("n1").innerHTML="0A1B";}
+            else if (document.getElementById("number1").value != target1 && document.getElementById("number2").value == target1 && document.getElementById("number3").value != target3)
+                {document.getElementById("n1").innerHTML="0A1B";}
+            else if (document.getElementById("number1").value != target1 && document.getElementById("number2").value == target3 && document.getElementById("number3").value != target3)
+                {document.getElementById("n1").innerHTML="0A1B";}
+            else if (document.getElementById("number1").value == target2 && document.getElementById("number2").value != target2 && document.getElementById("number3").value != target3)
+                {document.getElementById("n1").innerHTML="0A1B";}
+            else if (document.getElementById("number1").value == target3 && document.getElementById("number2").value != target2 && document.getElementById("number3").value != target3)
+                {document.getElementById("n1").innerHTML="0A1B";}
+            else{document.getElementById("n1").innerHTML="0A0B";}
+        }
+            $(document).ready(function(){
+	            $("#btn2").click(function(){
+	            	$("ol").append("<li>"+document.getElementById("number1").value+document.getElementById("number2").value+document.getElementById("number3").value+" " +document.getElementById("n1").innerHTML+"</li>");
+	            });
+            })
+     </script>
+    
+	<style type="text/css">
+		h1{color: #000099;margin: 0px;}
+		form{color: #fcdeef;}
+		td{color: #ffffff;background: #000000;}
+		button{color:red ;font-size:"6";} 
+		div.a{background-image:url("images/a.JPG");margin: 0px;}
+		div.b{background-image:url("images/c.JPG");}
+		div.c{background-image:url("images/d.jpg");}
+		div.d{background-image:url("images/e.jpg");text-align:center;}
+		div.f{float:right;height:auto;}
+		div.g{float:left;height:auto;}
+		div.h{height:auto;position:fixed;bottom: 10%;right: 0px;}
+		hr{border: 1px;height: 2px;background-color: #d4d4d4;margin: 0px;}
+		script{color:red;}
+		img{display:block;margin:auto; height: auto;width: auto;max-width: 100%;max-height: 100%;}
+		table{margin-left:auto;margin-right: auto;}
+		div.d ol{display:inline-block;}
+		body{text-align:center;margin: 0px;}
+		p.e{font-size: 16px;color:white;text-align:right;margin: 0px;}	
+	    </style>
+		
+</head>
+
+<body>
+    <div class="a">
+	    <div class="g"><p class="e"> 鮮<br>紅<br>的<br>地<br>毯</p></div>
+        <div class="f"><p class="e"> 鮮<br>紅<br>的<br>地<br>毯</p></div>   
+        <img src="images/小遊戲劇場.JPG">
+        </div>
+
+    <hr>
+
+    <div class="b">
+	    <div class="g"><p class="e"><p class="e">粉<br>彩<br>的<br>童<br>年</p></div>
+	    <div class="f"><p class="e"><p class="e">粉<br>彩<br>的<br>童<br>年</p></div>
+
+            <h1>第零幕：序章</h1>
+
+            <b>你好：我是劇場的負責人代號Y，
+                <br>這裡是小遊戲場，
+                <br>為了保障你的權益，
+                <br>為了能讓你盡情遊戲，
+                <br>請依照我的指示完成指令。</b>
+            <br>
+            <br>
+
+            <form>
+                <b>
+                輸入您的姓名: <input type="text" id="name"></b>
+            </form>
+
+            <p id="content"></p>
+            <button type="button" onclick="content1()">點我一下!</button>
+	        <br>
+	        <br>   
+            </div>
+
+    <hr> 
+
+    <div class="c">
+        <div class="g"><p class="e">綠<br>嫩<br>的<br>光<br>陰</p></div>
+        <div class="f"><p class="e">綠<br>嫩<br>的<br>光<br>陰</p></div>
+
+    	    <h1>第一幕：看出我內心</h1>
+    	    <br>
+
+            <b>你能看透人心嗎？
+                <br>想知道我在想什麼嗎？
+                <br>來看出我的幸運數字吧！</b>
+            <br>
+            <br>
+
+            <form>
+                <b>
+                幸運數字: <input type="text" id="number"></b>
+            </form> 
+
+            <table border="1">
+            	<td>最小</td>
+            	<td>最大</td>
+            	<tr>
+            		<td id="little">1</td>
+            	    <td id="large">100</td>
+            	</tr>
+            </table>
+
+            <p id="Bingo"></p>
+
+            <button type="button" onclick="eval()">我看！</button>
+	        <br>
+	        <br>
+	        </div>
+
+    <hr>
+
+    <div class="d">
+        <div class="g"><p class="e">橙<br>睡<br>的<br>過<br>往</p></div>
+	    <div class="f"><p class="e">橙<br>睡<br>的<br>過<br>往</p></div>
+            <h1>第二幕：A與B的選擇</h1>
+            <br>
+            <b >看來很簡單呢？
+                <br>那就來挑戰我的終極密碼(0~9)。
+                <br>這次不會給你太多提示了，
+                <br>你還能順利看破人心嗎？
+                <br>小提示：
+	            <br>數字不重複且一格限填一個數字
+                <br>A代表數字正確且位置正確，   
+                <br>B代表數字正確但位置錯誤。
+            </b>
+      
+            <br>
+            <br>
+
+            <form>
+                <b>
+                猜數字:<input type="text" id="number1"><input type="text" id="number2"><input type="text" id="number3">
+                </b>
+            </form> 
+
+            <table border="1">
+                <td>密碼提示</td>
+                <tr>
+                    <td id="n1">-</td>
+                </tr>
+            </table>	
+
+            <ol></ol>
+            <br>
+
+            <button type="button" onclick="eval1()" id="btn2">我再看！</button>
+
+            <p id="n2"></p>
+            </div>
+    <hr>
+
+    <div id="leave" class="h"><a href="javascript:close_window();"></a></div>
+
+</body>
+</html>

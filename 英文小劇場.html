@@ -1,0 +1,145 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>英文考試</title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <style type="text/css">
+        div.aa{background-image:url("images/aa.jpg");}
+        div.bb{background-image:url("images/bb.jpg");}
+        div.cc{background-image:url("images/cc.jpg");}
+        div.dd{background-image:url("images/dd.jpg");}
+        div.gg{background-image:url("images/gg.jpg" );}
+        div.hh{float:right;height:auto; }
+        div.mm{float:left;height:auto; }
+        div.h{height:auto;position:fixed;bottom: 10%;right: 0px;}
+        div.i{height:auto;position:fixed;bottom: 10%;left: 0px;}
+        body{text-align: center;margin:0px;}
+        h1{color:purple;}
+        </style>
+    <script type="text/javascript">
+        var number1=document.getElementById("number1" );
+        function eval1(){
+            if (document.getElementById("number1").value.toLowerCase("number1")=="apple")
+                {document.getElementById("eval1").innerHTML="對了，很好，這是基本，沒什麼好驕傲的。";}
+            else{document.getElementById("eval1").innerHTML="錯了，你知道A~Z有26個字母嗎?";}
+        }       
+        var number=document.getElementById("number2" );
+        var number=document.getElementById("number3" );
+        function eval2(){
+            if (document.getElementById("number2").value.toLowerCase("number2")=="banana" && document.getElementById("number3").value.toLowerCase("number3")=="camera")
+                {document.getElementById("eval2").innerHTML="對，看來你有學過一點英文喔！";}
+            else{document.getElementById("eval2").innerHTML="錯了，我看你還是再唸一次幼稚園吧！";}
+        }
+        var number1=document.getElementById("number4" );
+        var number=document.getElementById("number5" );
+        var number=document.getElementById("number6" );
+        function eval4(){
+            if (document.getElementById("number4").value.toLowerCase("number4")=="diamond"&& document.getElementById("number5").value.toLowerCase("number5")=="elephant" && document.getElementById("number6").value.toLowerCase("number6")=="flour")
+                {document.getElementById("eval4").innerHTML="對，看來你能到達這裡，真是不簡單啊~";}
+            else{document.getElementById("eval4").innerHTML="錯了，果真是朽木不可雕也！";}
+        }
+        var number1=document.getElementById("number7" );
+        var number=document.getElementById("number8" );
+        var number=document.getElementById("number9" );
+        var number1=document.getElementById("number10" );
+        function eval7(){
+            if (document.getElementById("number7").value.toLowerCase("number7")=="ink"&& document.getElementById("number8").value.toLowerCase("number8")=="jacket"&&document.getElementById("number9").value.toLowerCase("number9")=="keyboard"&& document.getElementById("number10").value.toLowerCase("number10")=="lion")
+                {document.getElementById("eval7").innerHTML="竟然對了，那我就看在你全對份上就放你走吧！";document.getElementById("leave").innerHTML="<a href='玩讀小區.html'><img src='images/f.JPG'></a>";}
+            else{document.getElementById("eval7").innerHTML="錯了，你還是砍掉從練吧！";document.getElementById("repect").innerHTML="<a href='英文小天地.html'><img src='images/repect.JPG'></a>";}
+        }
+        </script>
+
+</head>
+<body>
+
+    <div class="dd">
+        <div class="hh"><p class="e">坦<br>白<br>的<br>考<br>卷</p></div>
+        <div class="mm"><p class="e">坦<br>白<br>的<br>考<br>卷</p></div>
+        <img src="images/kk.jpg">
+
+        </div>  
+
+    <div class="aa">
+        <div class="hh"><p class="e">鮮<br>紅<br>的<br>記<br>憶</p></div>
+        <div class="mm"><p class="e">鮮<br>紅<br>的<br>記<br>憶</p></div>
+        <h1>先讓你有個成就感吧!</h1>
+        <p>你好~!我是Y.P.C小天使，歡迎來到惡魔英文小天地。</p>
+        <p>想要從我這過關，就動動你的小腦袋吧！</p>
+    
+        <form>
+        蘋果: <input type="text" id="number1">
+        </form>
+
+        <p id="eval1"></p>
+        <button type="button" onclick="eval1()">確定</button>
+
+        </div>
+
+    <div class="bb" >
+        <div class="hh"><p class="e">黃<br>色<br>的<br>痕<br>跡</p></div>
+        <div class="mm"><p class="e">黃<br>色<br>的<br>痕<br>跡</p></div>
+        <p>再來更進階的，</p>
+        <p>小心！</p>
+        <p>只答對一題是沒用的。</p>
+
+        <form>
+        香蕉: <input type="text" id="number2" >
+        </form>
+        <form>
+        相機: <input type="text" id="number3" >
+        </form>
+
+        <p id="eval2"></p>
+        <button type="button" onclick="eval2()">你確定嗎</button>
+
+        </div>
+
+    <div class="cc">
+        <div class="hh"><p class="e">湛<br>藍<br>的<br>天<br>空</p></div>
+        <div class="mm"><p class="e">湛<br>藍<br>的<br>天<br>空</p></div>
+        <p>就算你往天上看也不會有答案的。</p>
+
+        <form>
+        鑽石: <input type="text" id="number4" >
+        </form>
+        <form>
+        大象: <input type="text" id="number5" >
+        </form>
+        <form>
+        麵粉: <input type="text" id="number6" >
+        </form>
+
+        <p id="eval4"></p>
+        <button type="button" onclick="eval4()">確定</button>
+
+        </div>
+
+    <div class="gg">
+        <div class="hh"><p class="e">慘<br>綠<br>的<br>臉<br>色</p></div>
+        <div class="mm"><p class="e">慘<br>綠<br>的<br>臉<br>色</p></div>
+        <p>現在是豁然開朗，還是失望透頂呢？</p>
+        <p>如果全對，那恭喜你，代表你有認真讀英文，要持續下去喔！</p>
+        <p>如果沒過關，也不要棄餒，要加把勁，相信你有一天會通往天堂。</p>
+
+        <form>
+        墨水: <input type="text" id="number7" >
+        </form>
+        <form>
+        夾克: <input type="text" id="number8" >
+        </form>
+        <form>
+        鍵盤: <input type="text" id="number9" >
+        </form>
+        <form>
+        獅子: <input type="text" id="number10" >
+        </form>
+
+        <p id="eval7"></p>
+        <button type="button" onclick="eval7()">確定</button>
+
+        </div>
+
+        <div id="repect" class="i"></div>
+        <div id="leave" class="h"></div>
+</body>
+</html>
